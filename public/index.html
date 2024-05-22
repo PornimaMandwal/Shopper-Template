@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en-in">
+
+<head>
+    <meta http-equiv="refresh" content="100">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>shopping sit</title>
+    <link rel="hsortcut icon" href="/public/images/favicon.ico">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-family: "Arial";
+            color: black;
+            background-color: white;
+            padding: 20px;
+
+        }
+
+        .header-title {
+            font-weight: bold;
+            font-size: 24px;
+
+        }
+
+        span {
+            margin-right: 20px;
+
+        }
+
+        .bi-lightning-fill {
+            color: goldenrod;
+        }
+
+        article {
+            margin-top: 15px;
+            text-align: center;
+            background: black;
+            color: white;
+            padding: 20px;
+
+        }
+
+        section {
+            height: 2500px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            font-family: arial;
+            /* margin-top: 500px; */
+
+        }
+
+        .footer-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: darkcyan;
+
+
+        }
+
+        .title-footer {
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: rgb(0, 139, 139);
+
+
+        }
+
+        .title~div {
+            margin-bottom: 15px;
+        }
+
+        main {
+            height: 450px;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            margin-top: 20px;
+        }
+
+        .women {
+            background-image: url(/public/image/summer.jpg);
+            background-size: cover;
+
+        }
+
+        .men {
+            background-image: url(/public/image/mens\ shirt.jpg);
+            background-size: cover;
+
+        }
+
+        .kids {
+            background-image: url(/public/image/last1.jpg);
+            background-size: cover;
+
+        }
+
+        .men,
+        .women,
+        .kids {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.7;
+        }
+
+        .women:hover {
+            opacity: 1;
+        }
+
+        .men:hover {
+            opacity: 1;
+        }
+
+        .kids:hover {
+            opacity: 1;
+        }
+
+        button {
+            height: 40px;
+            width: 150px;
+            background-color: white;
+            border: none;
+            margin-top: 170px;
+
+        }
+
+        .title {
+            font-size: 50px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            font-weight: bold;
+        }
+
+        .bi-truck,
+        .bi-arrow-left-right,
+        .bi-lock,
+        .bi-tag {
+            color: red;
+        }
+
+        .feature {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 150px;
+            margin-right: 150px;
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial;
+            /* border-bottom: 2px solid gray; */
+            margin-bottom: 50px;
+
+        }
+
+        .f-title {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+
+        }
+
+        .main-banner {
+            text-align: center;
+            font-family: Arial;
+            border-top: 2px solid gray;
+            padding: 50px;
+
+        }
+
+        .main-title {
+            color: gray;
+            padding: 10px;
+
+        }
+
+        .sub-title {
+            font-weight: bold;
+            font-size: 25px;
+            padding: 10px;
+        }
+
+        .main-text {
+            font-size: 18px;
+            padding-top: 10px;
+        }
+
+        .banner-row-1 {
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+        }
+
+        .row-1-left {
+            background-image: url(/public/image/basicdress.webp);
+            background-size: cover;
+            margin-left: 20px;
+            /* opacity: 0.7; */
+        }
+
+        .row-1-right {
+            background-image: url(/public/image/swetshirt.webp);
+            background-size: cover;
+            height: 350px;
+            margin-right: 20px;
+            margin-left: 20px;
+            position: relative;
+            /* opacity: 0.7; */
+        }           
+
+        .offer {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: red;
+            color: white;
+            height: 60px;
+            width: 60px;
+            border-radius: 60px;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .part {
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            height: 400px;
+        }
+
+        .page1 {
+            background-image: url(/public/image/basicdress.webp);
+            background-size: cover;
+            margin-left: 80px;
+           
+
+        }
+        .part2-title{
+            font-size: 25px;
+            color:crimson;
+            margin-top: 100px;
+            margin-left: 100px;
+       
+
+        }
+
+        .part1-subtitle {
+            margin-left: 50px;
+            
+        }
+
+        .part2-subtitle {
+            margin-left: 350px;
+
+        }
+
+        .area1-subtitle {
+            margin-left: 180px;
+
+        }
+
+        .area2-subtitle {
+            margin-left: 170px;
+
+        }
+
+
+        .part1-title {
+            text-align: center;
+            background-size: cover;
+            margin-top: 100px;
+            font-size: 25px;
+            color: white;
+        }
+
+        .page2 {
+            background-image: url(/public/image/mens\ shirt.jpg);
+            background-size: cover;
+            margin-left: 80px;
+
+        }
+
+        .fashion {
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            height: 400px;
+            margin-top: 50px;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        .area1 {
+            background-image: url(/public/image/kurti.webp);
+            background-size: cover;
+       
+
+
+        }
+
+        .area2 {
+            background-image: url(/public/image/swetshirt.webp);
+            background-size: cover;
+            margin-left: 80px;
+
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .heading-subtitle {
+            text-align: center;
+            margin-top: 25px;
+
+        }
+
+        .heading-title {
+            font-weight: bold;
+            font-size: 50px;
+            margin-top: 30px;
+
+
+        }
+
+
+
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: 50px;
+            background-size: cover;
+
+        }
+
+        .card-image {
+            display: flex;
+            justify-content: center;
+            height: 350px;
+            width: 300px;
+        }
+
+        .card-footer {
+            font-family: arial;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* discover more */
+        .search {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 25px;
+            font-family: arial;
+        }
+
+        /*  */
+        .time+span {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        strike {
+            color: red;
+        }
+
+        .say {
+            text-align: center;
+            color: gray;
+            font-size: 15px;
+            margin-top: 50px;
+        }
+
+        .buy {
+            text-align: center;
+            font-weight: bold;
+            font-size: 35px;
+            margin-top: 20px;
+            font-family: arial;
+        }
+
+        /* Reviews */
+        .card1 {
+            width: 200px;
+            margin: 20px;
+            padding: 5px;
+            box-shadow: 2px gray;
+            border: 2px solid gray;
+        }
+
+        .card1-img {
+            width: 75%;
+            margin-left: 25px;
+            
+        }
+
+        .card1-header {
+            height: 150px;
+            
+            
+        }
+
+        .card1-body {
+            height: 400px;
+            
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .card1-rating {
+            color: goldenrod;
+            margin-top: 20px;
+        }
+
+        .card1-footer {
+            text-align: center;
+            font-size: 20px;
+            padding: 5px;
+            
+        }
+
+        .shoes-reviews {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 30px;
+            margin-left: 130px;
+
+        }
+
+        .card1-sub-title {
+            font-size: 15px;
+        
+        }
+    
+        /* last-second */
+
+        .last-second{
+            
+            border-top: 2px solid gray;
+            margin-top: 20px;
+            font-family: arial;
+
+        }
+        .logo{
+            font-size: 45px;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-left: 600px;
+            font-weight: bold;
+        }
+        .logo-title{
+            margin-left: 600px;
+        }
+        .last{
+            display:grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr ;
+            margin-top: 250px;
+           
+        }
+        .last-row{
+            margin-left: 20px;
+            
+        }
+   
+       
+
+
+    </style>
+</head>
+
+<body >
+    <header>
+        <div>
+            <span class="bi bi-cart4"></span>
+            <span class="header-title">shopper.</span>
+        </div>
+        <div>
+            <span>Home</span>
+            <span>Catlogs</span>
+            <span>Pages</span>
+            <span>Shop</span>
+            <span>Blogs</span>
+            <span>Docs</span>
+        </div>
+        <div>
+            <span class="=bi bi-search"> </span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+    </header>
+    <article>
+        <marquee scrollamount="10" behavior="alternate" direction="left">
+        <span class="bi bi-lightning-fill"></span>
+        HAPPY HOLIDAY SALES DEALS ON EVERYTHING
+        <span class="bi bi-lightning-fill"></span>
+    </marquee>
+    </article>
+
+    <main height="700px">
+        <div class="women">
+            <div>
+                <div class="title">Women</div>
+                <div><button class="btn btn-primary">Shop women <span class="bi bi-arrow-right"></span></button></div>
+            </div>
+        </div>
+
+        <div class="men">
+            <div>
+                <div class="title">Men</div>
+                <div><button class="btn btn-primary">Shop men <span class="bi bi-arrow-right"></span></button></div>
+            </div>
+        </div>
+
+        <div class="kids">
+            <div>
+                <div class="title">Kids</div>
+                <div><button class="btn btn-primary">Shop Kids <span class="bi bi-arrow-right"></span></button></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="feature">
+        <div>
+            <div class="f-title"><span class="bi bi-truck"></span>FREE SHIPPING</div>
+            <div>From all order over $100 </div>
+        </div>
+
+        <div>
+            <div class="f-title"><span class="bi bi-arrow-left-right"></span>FREE RETURNS</div>
+            <div>Return money within 30 days </div>
+        </div>
+
+        <div>
+            <div class="f-title"><span class="bi bi-lock"></span>SECURE SHOPPING</div>
+            <div>You're in safe hands</div>
+        </div>
+
+        <div>
+            <div class="f-title"><span class="bi bi-tag"></span>OVER 10,000 STYLES</div>
+            <div>We have everything you need</div>
+        </div>
+
+    </div>
+
+
+    <div class="main-banner">
+        <div>
+            <div class="main-title">NEW COLLECTION</div>
+            <div class="sub-title">Best Picks 2023</div>
+            <div class="main-text">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly
+                brought Very green.</div>
+        </div>
+    </div>
+
+
+    <section>
+
+        <div class="part">
+            <div class="page1">
+                <div class="part1-title" >Ladies Collection</div>
+                <div class="part1-subtitle"><button class="btn btn-primary me-4 ">Shop Now <span class="bi bi-arrow-right"></span></button></div>
+
+            </div>
+
+
+            <div class="page2">
+                <div class="part2-title">Printed Mens Shirt</div>
+                <div class="part2-subtitle"><button class="btn btn-primary me-4">Shop Now <span class="bi bi-arrow-right"></span></button></div>
+
+            </div>
+
+        </div>
+
+        <div class="fashion">
+            <div class="area1">
+                <div class="area1-title">Basic Women Dresses</div>
+                <div class="area1-subtitle"><button class="btn btn-primary me-4">Shop Now <span class="bi bi-arrow-right"></span></button></div>
+
+            </div>
+
+
+            <div class="area2">
+                <div class="area2-title">Sweatshirts</div>
+                <div class="area2-subtitle"><button class="btn btn-primary me-4">Shop Now <span class="bi bi-arrow-right"></span></button></div>
+
+            </div>
+        </div>
+
+        <div class="heading">
+            <div>
+                <div class="heading-title">Top Month Seller </div>
+                <div class="heading-subtitle">
+                    <span>Women</span>
+                    <span>Men</span>
+                    <span>kid</span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- 4th part -->
+
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <img src="/public/image/sandals.jpg" class="card-image">
+                </div>
+
+                <div class="card-footer">
+                    <div>Shoes</div>
+                    <div>Leather mid-heel Sandals</div>
+                    <div>$129.00</div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="/public/image/floraldress.avif" class="card-image">
+                </div>
+
+                <div class="card-footer">
+                    <div>Dresses</div>
+                    <div>Cotton floral print Dress</div>
+                    <div>$40.00</div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="/public/image/sneakers.webp" class="card-image">
+                </div>
+
+                <div class="card-footer">
+                    <div>Shoes</div>
+                    <div>Leather Sneakers</div>
+                    <div><strike>$95.00</strike>$85.00</div>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="/public/image/floraltop.webp" class="card-image">
+                </div>
+
+                <div class="card-footer">
+                    <div>Tops</div>
+                    <div>Cropped cotton Top</div>
+                    <div>$29.00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5th row -->
+
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <img src="/public/image/mididress.webp" class="card-image">
+                </div>
+
+                <div class="card-footer">
+                    <div>Tops</div>
+                    <div>Cropped cotton Top</div>
+                    <div>$29.00</div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="/public/image/crossbag.jpg" class="card-image">
+                </div>
+
+                <div class="card-footer">
+                    <div>Bags</div>
+                    <div>Suede cross body Bag</div>
+                    <div><strike>$79.00</strike>$49.00</div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="/public/image/skirt.jpg" class="card-image">
+                </div>
+
+                <div class="card-footer">
+                    <div>Skirts</div>
+                    <div>Printed A-line Skirt</div>
+                    <div>$79.00</div>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <img src="/public/image/stappysandals.jpg" class="card-image">
+                </div>
+
+                <div class="card-footer">
+                    <div>Shoes</div>
+                    <div>Heel strappy Sandals</div>
+                    <div>$90.00</div>
+                </div>
+            </div>
+        </div>
+        <!-- _____________________________--------------- -->
+
+      
+
+
+        <!-- ------------------------------------ -->
+
+       
+
+       
+        <!-- ----------------------------------------------- -->
+
+        
+        <!-- Card 4 -->
+        
+
+        </div>
+    </div>
+</div>
+
+    </section>
+
+          
+
+    <footer>
+
+        <div>
+            <div class="footer-title">Shopper.</div><br> <br>
+            <div>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-youtube"></span>
+                <span class="bi bi-twitter"></span>
+            </div>
+        </div>
+        <div>
+            <div class="title-footer">SUPPORT</div>
+            <div>Contact Us</div>
+            <div> FAQs</div>
+            <div>Size Guide</div>
+            <div>Shipping & Returns</div>
+        </div>
+        <div>
+            <div class="title-footer">SHOP</div>
+            <div>Men's Shopping</div>
+            <div> Women's Shopping</div>
+            <div> Kids' Shopping</div>
+            <div> Discounts</div>
+        </div>
+        <div>
+            <div class="title-footer">COMPANY</div>
+            <div>Our Story</div>
+            <div> Careers</div>
+            <div> Terms & Conditions</div>
+            <div> Privacy & Cookie policy</div>
+        </div>
+        <div>
+            <div class="title-footer">CONTACT</div>
+            <address>
+                <div>1-202-555-0105</div>
+                <div>1-202-555-0106</div>
+                <div>help@shopper.com </div>
+            </address>
+        </div>
+    </footer>
+</body>
+
+</html>
